@@ -1,0 +1,14 @@
+<div class="col-6 col-centered">
+  <input type="text" class="form-control" placeholder="Type email" [(ngModel)] = "email">
+  <input type="text" class="form-control" placeholder="Type password" [(ngModel)] = "password">
+  <button class="btn btn-primary" (click)="registration()">Registration</button>
+  <button class="btn btn-success float-right">Login</button>
+  <br>
+  <br>
+  <div class="alert alert-success" role="alert">
+    Login success
+  </div>
+  <div class="alert alert-danger" role="alert">
+    Login error!
+  </div>
+</div>

@@ -1,1 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+  margin-top: 50px;
+}
+
+article{
+  margin-top: 50px;
+}
+
+input, textarea{
+  margin-bottom: 20px;
+}
+
+.col-centered{
+  float: none;
+  margin: 0 auto;
+}
+
+.contact-top-menu{
+  margin: 10px;
+}
