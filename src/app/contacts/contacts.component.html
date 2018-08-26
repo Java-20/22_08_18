@@ -1,11 +1,9 @@
 <div class="row">
   <div class="col-4">
     <div class="list-group">
-      <a href="#" class="list-group-item list-group-item-action">Vasya</a>
-      <a href="#" class="list-group-item list-group-item-action">Petya</a>
-      <a href="#" class="list-group-item list-group-item-action">Sofa</a>
-      <a href="#" class="list-group-item list-group-item-action">Tanya</a>
-      <a href="#" class="list-group-item list-group-item-action disabled">Alla</a>
+      <a *ngFor="let c of interactor.contacts; let i = index"
+         class="list-group-item list-group-item-action"
+      [routerLink]="['/contacts',i]">{{c.fullName}}</a>
     </div>
   </div>
   <div class="col col-centered">

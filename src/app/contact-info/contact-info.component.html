@@ -1,20 +1,21 @@
 
 
   <button class="btn btn-primary float-right contact-top-menu">Edit</button>
-  <button class="btn btn-success float-right contact-top-menu">Save</button>
+  <button class="btn btn-success float-right contact-top-menu" (click)="changeContact()">Save</button>
   <button class="btn btn-danger float-right contact-top-menu">Cancel</button>
   <h1>Contact info</h1>
 
-  <div >
-    <p>Vasya</p>
-    <p>vasya@mail.com</p>
-    <p>055555555</p>
-    <p>Tel Aviv</p>
-    <p>Description</p>
+  <div *ngIf="current!=null">
+    <p>{{current.fullName}}</p>
+    <p>{{current.email}}</p>
+    <p>{{current.phoneNumber}}</p>
+    <p>{{current.address}}</p>
+    <p>{{current.description}}</p>
   </div>
+  <ng-template #editContact style="display: none">
   <input type="text" class="form-control" placeholder="Type name">
   <input type="text" class="form-control" placeholder="Type email">
   <input type="text" class="form-control" placeholder="Type phone">
   <input type="text" class="form-control" placeholder="Type address">
   <textarea type="text" class="form-control" rows="3" placeholder="Type description"></textarea>
-
+  </ng-template>

@@ -22,4 +22,15 @@ export class LoginInteractor {
       })
     );
   }
+
+  login(email:string, password:string):Observable<boolean>{
+    let auth = new AuthModel(email,password);
+    return this.http.login(auth)
+      .pipe(
+        map(v=>{
+          this.store.saveToken(v.token);
+          return true;
+        })
+      );
+  }
 }

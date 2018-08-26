@@ -33,4 +33,21 @@ export class LoginComponent implements OnInit {
           this.password = '';
         });
   }
+
+  login() {
+    this.interactor.login(this.email, this.password)
+      .subscribe(v => {
+          if (v) {
+            console.log('Login success');
+          } else {
+            console.log('Something went wrong');
+          }
+        }, err => {
+          console.log('Error:' + err);
+        },
+        () => {
+          this.email = '';
+          this.password = '';
+        });
+  }
 }
